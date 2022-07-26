@@ -65,7 +65,7 @@ section {
   padding-bottom: 94px;
 }
 
-.section-title {
+.section__title {
   margin-top: 0;
   margin-bottom: 50px;
   font-weight: 700;
@@ -267,7 +267,7 @@ section {
   background-position: center;
 }
 
-.section-title--big {
+.section__title--big {
 
   margin-bottom: 30px;
   margin-left: auto;
