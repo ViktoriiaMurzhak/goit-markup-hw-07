@@ -60,7 +60,7 @@ textarea {
   padding-right: 15px;
 }
 
-section{
+section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -114,18 +114,18 @@ section{
   border-bottom: 1px solid #ececec;
 }
 
-.nav-contact {
+.header__box {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
 }
 
-.nav__logo {
+.logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -133,20 +133,23 @@ section{
   letter-spacing: 0.03em;
   color: black;
   text-decoration: none;
-  padding-top: 24px;
-  padding-bottom: 25px;
 
   transition-property: color;
   transition-duration: var(--time-hover);
   transition-timing-function: var(--time-function);
 }
 
-.nav-logo__span {
+.header__logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.logo__span {
   color: var(--accent-color);
 }
 
-.nav__logo:hover,
-.nav__logo:focus {
+.logo:hover,
+.logo:focus {
   color: var(--link-hover-color);
 }
 
@@ -175,12 +178,12 @@ section{
   transition-timing-function: var(--time-function);
 }
 
-.site-nav__link.current {
+.site-nav__link--active {
   position: relative;
   color: var(--accent-color);
 }
 
-.site-nav__link.current::after {
+.site-nav__link--active::after {
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -215,8 +218,8 @@ section{
 .contact__link {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--primary-text-color);
   text-decoration: none;
   font-style: normal;
@@ -233,8 +236,7 @@ section{
 .contact__link:hover,
 .contact__link:focus,
 .contact__link:hover .contact__icon,
-.contact__link:focus .contact__icon
-{
+.contact__link:focus .contact__icon {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -249,7 +251,6 @@ section{
   transition-duration: var(--time-hover);
   transition-timing-function: var(--time-function);
 }
-
 
 /* ========ORDER======= */
 /* Эффективные решения для вашего бизнеса */
@@ -266,8 +267,8 @@ section{
   background-position: center;
 }
 
-.hero-title {
-  margin-top: 0;
+.section-title--big {
+
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -417,7 +418,7 @@ section{
   padding-bottom: 30px;
 }
 
-.team-card__title{
+.team-card__title {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -476,7 +477,6 @@ section{
 /* =====CLIENTS=== */
 /* Постоянные клиетны */
 
-
 .clients__list {
   display: flex;
   justify-content: center;
@@ -534,18 +534,11 @@ section{
   display: flex;
 }
 
-.footer-logo {
+.footer__logo {
   display: block;
   margin-bottom: 20px;
 
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
   color: #fff;
-  text-decoration: none;
-
   transition-property: color;
   transition-duration: var(--time-hover);
   transition-timing-function: var(--time-function);
@@ -593,7 +586,6 @@ section{
 }
 
 /* link soc */
-
 
 .footer-social {
   margin-left: 70px;
@@ -953,7 +945,7 @@ section{
   align-items: center;
 }
 
-.form-button__box{
+.form-button__box {
   padding: 0;
 
   width: 200px;
@@ -974,7 +966,6 @@ section{
 /* ================= */
 /* PORTFOLIO STYLES */
 /* ================= */
-
 
 /* ===СПИСОК КНОПОК=== */
 
@@ -1066,7 +1057,7 @@ section{
 }
 
 .portfolio-card__item:hover .portfolio-card__overlay,
-.portfolio-card__item:focus .portfolio-card__overlay{
+.portfolio-card__item:focus .portfolio-card__overlay {
   transform: translateY(0);
 }
 
