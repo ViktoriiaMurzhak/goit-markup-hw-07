@@ -60,6 +60,11 @@ textarea {
   padding-right: 15px;
 }
 
+section{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -303,8 +308,6 @@ textarea {
 /* ======FEATURES===== */
 /* features Особенности*/
 .feature {
-  padding-top: 94px;
-  padding-bottom: 94px;
   padding-left: 0;
   padding-right: 0;
   background-color: var(--bg-color-wite);
@@ -354,7 +357,7 @@ textarea {
 
 .work {
   background-color: var(--bg-color-wite);
-  padding-bottom: 94px;
+  padding-top: 0;
 }
 
 .work__list {
@@ -390,8 +393,6 @@ textarea {
 /* Наша команда */
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: var(--bg-another-color);
 }
 
@@ -475,10 +476,6 @@ textarea {
 /* =====CLIENTS=== */
 /* Постоянные клиетны */
 
-.clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
 .clients__list {
   display: flex;
@@ -597,11 +594,12 @@ textarea {
 
 /* link soc */
 
-.footer-link {
+
+.footer-social {
   margin-left: 70px;
 }
 
-.footer-link-text {
+.footer-social__label {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -612,12 +610,12 @@ textarea {
   color: #ffffff;
 }
 
-.footer-link-list {
+.footer-social__list {
   display: flex;
   gap: 10px;
 }
 
-.footer-social {
+.footer-social__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -632,29 +630,31 @@ textarea {
   transition-timing-function: var(--time-function);
 }
 
-.footer-social:hover,
-.footer-social:focus {
+.footer-social__link:hover,
+.footer-social__link:focus {
   background-color: var(--accent-color);
 }
 
-.footer-link-icon {
+.footer-social__icon {
   width: 20px;
   height: 20px;
 }
 
-.form-sumbit {
+/* Footer form */
+
+.footer-form {
   display: flex;
   justify-content: space-between;
   width: 570px;
   margin-left: 93px;
 }
 
-.sumbit-label-input {
+.footer-form__box {
   display: flex;
   flex-direction: column;
 }
 
-.sumbit-input {
+.footer-form__input {
   padding: 15px 16px;
 
   width: 358px;
@@ -675,18 +675,18 @@ textarea {
   transition-timing-function: var(--time-function);
 }
 
-.sumbit-input:focus {
+.footer-form__input:focus {
   outline: 1px solid var(--accent-color);
 }
 
-.sumbit-label-input input::placeholder {
+.footer-form__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.sumbit-label-input label {
+.footer-form__label {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -696,13 +696,13 @@ textarea {
   color: #ffffff;
 }
 
-.footer-btn {
+.footer-button {
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
-.footer-form-btn {
+.footer-button__box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -721,7 +721,7 @@ textarea {
   color: #ffffff;
 }
 
-.form-icon-send {
+.footer-button__icon {
   margin-left: 10px;
   width: 24px;
   height: 24px;
@@ -953,7 +953,7 @@ textarea {
   align-items: center;
 }
 
-.form-button__send{
+.form-button__box{
   padding: 0;
 
   width: 200px;
@@ -975,25 +975,17 @@ textarea {
 /* PORTFOLIO STYLES */
 /* ================= */
 
-.portfolio-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.portf-title {
-  font-size: 0;
-}
 
 /* ===СПИСОК КНОПОК=== */
 
-.buttons-portf.list {
+.button-list {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
   gap: 8px;
 }
 
-.btn-portf {
+.button-list__button {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-right: 22px;
@@ -1016,8 +1008,8 @@ textarea {
   transition-timing-function: var(--time-function);
 }
 
-.btn-portf:hover,
-.btn-portf:focus {
+.button-list__button:hover,
+.button-list__button:focus {
   background: var(--link-hover-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1026,7 +1018,13 @@ textarea {
 
 /*===ПОРТФОЛІО РОБІТ=== */
 
-.portfolio-list .item {
+.portfolio-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-card__item {
   width: 370px;
   height: 404px;
 
@@ -1035,18 +1033,12 @@ textarea {
   transition-timing-function: var(--time-function);
 }
 
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.portf-thumb {
+.portfolio-card__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.portf-overlay {
+.portfolio-card__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -1067,25 +1059,33 @@ textarea {
   transition: transform var(--time-hover) var(--time-function);
 }
 
-.portfolio-list .item:hover {
+.portfolio-card__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
 
-.portfolio-list .item:hover .portf-overlay {
+.portfolio-card__item:hover .portfolio-card__overlay,
+.portfolio-card__item:focus .portfolio-card__overlay{
   transform: translateY(0);
 }
 
-.portfolio-list .item:focus .portf-overlay {
-  transform: translateY(0);
-}
-
-.portf-card {
+.portfolio-card__img {
   display: block;
 }
 
-.portf-list-title {
+.portfolio-card__box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.portfolio-card__title {
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -1095,22 +1095,11 @@ textarea {
   color: var(--title-color);
 }
 
-.portf-list-text {
+.portfolio-card__text {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-}
-
-.card-border {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
-  margin: 0;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
 }
 
 /*
