@@ -26,7 +26,7 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: $text-color;
+  color: $priority-title-color;
 }
 
 .modal-form__label{
@@ -61,7 +61,6 @@ color: $text-color
   transition-property: outline-color;
   transition-duration: $time-hover;
   transition-timing-function: $time-function;
-
   &::placeholder {
       font-size: 14px;
       line-height: 1.14;
@@ -131,7 +130,6 @@ color: $text-color
   height: 15px;
   margin-left: -24px;
   background-image: url(../images/icons/square.svg);
-
   transition: background-image $time-hover $time-function;
 }
 
