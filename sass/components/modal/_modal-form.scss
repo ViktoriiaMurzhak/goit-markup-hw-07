@@ -1,5 +1,7 @@
-.modal__form {
+.modal-form {
   text-align: start;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal__title {
@@ -13,15 +15,11 @@
   color: $priority-title-color;
 }
 
-.modal-form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
 .modal-form__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  width: 448px;
+  height: 40px;
 
   cursor: pointer;
 
@@ -29,6 +27,30 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: $text-color;
+}
+
+.modal-form__label{
+margin-bottom: 4px;
+color: $text-color
+}
+
+.modal-form__box{
+  position: relative;
+}
+
+.modal-form__icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+
+  transition-property: fill;
+  transition-duration: $time-hover;
+  transition-timing-function: $time-function;
 }
 
 .modal-form__input.comment {
@@ -63,21 +85,6 @@
   &:focus {
   outline: 1px solid $accent-color;
   }
-}
-
-.modal-form__icon {
-  position: absolute;
-  top: 33px;
-  left: 15px;
-
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-color: transparent;
-
-  transition-property: fill;
-  transition-duration: $time-hover;
-  transition-timing-function: $time-function;
 }
 
 .form-checkbox {

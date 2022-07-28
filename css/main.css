@@ -950,8 +950,10 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__form {
+.modal-form {
   text-align: start;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal__title {
@@ -964,20 +966,38 @@ button {
   color: #212121;
 }
 
-.modal-form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
 .modal-form__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  width: 448px;
+  height: 40px;
   cursor: pointer;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
+}
+
+.modal-form__label {
+  margin-bottom: 4px;
+  color: #757575;
+}
+
+.modal-form__box {
+  position: relative;
+}
+
+.modal-form__icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form__input.comment {
@@ -1011,19 +1031,6 @@ button {
 
 .modal-form__input:focus {
   outline: 1px solid #2196F3;
-}
-
-.modal-form__icon {
-  position: absolute;
-  top: 33px;
-  left: 15px;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-color: transparent;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-checkbox {
