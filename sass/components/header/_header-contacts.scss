@@ -1,6 +1,6 @@
 .contact {
   @extend %list;
-  display: flex;
+  display: none;
   justify-content: end;
   gap: 30px;
 }

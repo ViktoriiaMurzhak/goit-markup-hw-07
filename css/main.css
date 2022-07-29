@@ -260,7 +260,10 @@ summary {
 }
 
 body {
-  margin: 0 0 0 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
   font-family: "Roboto", sans-serif;
   background: #ffffff;
   color: #757575;
@@ -300,27 +303,45 @@ button {
   font-size: 16px;
 }
 
+img {
+  display: block;
+}
+
 .container {
-  width: 1200px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
 .section__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.15;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .site-nav, .contact, .feature__list, .team-card, .team-social, .clients__list, .address-box, .footer-social__list, .buttons-list, .portfolio-card {
@@ -349,6 +370,8 @@ button {
 }
 
 .header {
+  height: 60px;
+  text-align: center;
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
 }
@@ -365,7 +388,7 @@ button {
 }
 
 .site-nav {
-  display: flex;
+  display: none;
   margin-left: 93px;
   gap: 50px;
 }
@@ -407,7 +430,7 @@ button {
 }
 
 .contact {
-  display: flex;
+  display: none;
   justify-content: end;
   gap: 30px;
 }
@@ -473,9 +496,18 @@ button {
   color: #2196F3;
 }
 
+.header__logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
 .footer__logo {
   display: block;
   margin-bottom: 20px;
+  text-align: center;
   color: #fff;
   transition-property: color;
   transition-duration: 250ms;
@@ -487,8 +519,8 @@ button {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   align-items: center;
   text-align: center;
   background-color: #2F303A;
@@ -499,13 +531,12 @@ button {
 
 .section__title--main {
   margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 696px;
-  height: 120px;
+  padding-right: 45px;
+  padding-left: 45px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
@@ -514,8 +545,8 @@ button {
 .hero__button {
   min-width: 200px;
   height: 50px;
-  margin-right: 484px;
-  margin-left: 484px;
+  margin-right: auto;
+  margin-left: auto;
   background: #2196F3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-weight: 700;
@@ -534,23 +565,26 @@ button {
 .feature {
   padding-left: 0;
   padding-right: 0;
-  background-color: var(--bg-color-wite);
+  background-color: #ffffff;
 }
 
 .feature__list {
-  display: flex;
   gap: 30px;
 }
 
 .feature__item {
-  max-width: 270px;
+  max-width: 100%;
+}
+
+.feature__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .feature__box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   margin-bottom: 30px;
   background-color: #F5F4FA;
@@ -564,6 +598,7 @@ button {
 
 .feature__title {
   margin-bottom: 10px;
+  text-align: center;
   color: #212121;
   font-weight: 700;
   font-size: 14px;
@@ -578,6 +613,7 @@ button {
 }
 
 .work {
+  display: none;
   background-color: #ffffff;
   padding-top: 0;
 }
@@ -614,19 +650,20 @@ button {
   background-color: #F5F4FA;
 }
 
-.team-card {
-  display: flex;
-  gap: 30px;
-}
-
 .team-card__item {
+  width: 100%;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-card__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .team-card__img {
-  display: block;
+  width: 450px;
+  height: 460px;
 }
 
 .team-card__box {
@@ -687,14 +724,16 @@ button {
 }
 
 .clients__list {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .clients__link {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -729,9 +768,9 @@ button {
   background-color: #2F303A;
 }
 
-.footer-box {
-  display: flex;
-  align-items: baseline;
+.address-box {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .address-box__link {
@@ -765,7 +804,7 @@ button {
 }
 
 .footer-social {
-  margin-left: 70px;
+  text-align: center;
 }
 
 .footer-social__label {
@@ -780,7 +819,9 @@ button {
 
 .footer-social__list {
   display: flex;
+  justify-content: center;
   gap: 10px;
+  margin-bottom: 60px;
 }
 
 .footer-social__link {
@@ -807,10 +848,7 @@ button {
 }
 
 .footer-form {
-  display: flex;
-  justify-content: space-between;
-  width: 570px;
-  margin-left: 93px;
+  text-align: center;
 }
 
 .footer-form__box {
@@ -820,8 +858,9 @@ button {
 
 .footer-form__input {
   padding: 15px 16px;
-  width: 358px;
+  width: 100%;
   height: 50px;
+  margin-bottom: 20px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
