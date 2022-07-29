@@ -1166,9 +1166,10 @@ img {
 
 .buttons-list {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 50px;
-  justify-content: center;
-  gap: 8px;
+  row-gap: 15px;
+  column-gap: 8px;
 }
 
 .buttons-list__button {
@@ -1195,12 +1196,12 @@ img {
 
 .portfolio-card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .portfolio-card__item {
-  width: 370px;
+  width: 450px;
   height: 404px;
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -1215,6 +1216,10 @@ img {
 .portfolio-card__item:hover .portfolio-card__overlay,
 .portfolio-card__item:focus .portfolio-card__overlay {
   transform: translateY(0);
+}
+
+.portfolio-card__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .portfolio-card__thumb {
