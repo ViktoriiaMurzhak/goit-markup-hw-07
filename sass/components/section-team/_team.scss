@@ -4,6 +4,8 @@
 
 .team-card {
   @extend %list;
-  // display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   // gap: 30px;
 }

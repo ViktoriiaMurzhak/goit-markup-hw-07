@@ -10,11 +10,18 @@ body {
   line-height: 1.33;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
@@ -66,14 +73,13 @@ img {
   @media screen and (min-width: $desktop) {
     width: $desktop;
   }
-
 }
 
 .section__title {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: 700;
-font-size: 28px;
+  font-size: 28px;
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
