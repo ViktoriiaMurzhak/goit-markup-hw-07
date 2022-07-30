@@ -8,6 +8,11 @@
     url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (min-width:$desktop){
+  padding-top: 200px;
+  padding-bottom: 200px;
+  }
 }
 
 .section__title--main {
@@ -15,12 +20,28 @@
   padding-right: 45px;
   padding-left: 45px;
   font-weight: 900;
+
   font-size: 26px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $second-text-color;
+
+  @media screen and (min-width:$tablet){
+  padding-right: 189px;
+  padding-left: 189px;
+  }
+
+  @media screen and (min-width:$desktop){
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 696px;
+    height: 120px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 

@@ -6,6 +6,11 @@
 
 .feature__list {
   @extend %list;
-  // display: flex;
-  gap: 30px;
+  
+  @media screen and (min-width:$tablet){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
 }

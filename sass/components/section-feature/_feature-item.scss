@@ -1,10 +1,22 @@
 .feature__item {
-  max-width: 100%;
+  max-width: 450px;
 
+  @media screen and (min-width:$tablet){
+  max-width: 354px;
+  margin-bottom: 0;
+  }
+
+  @media screen and (max-width:767px){
   &:not(:last-child){
-margin-bottom: 30px;
+  margin-bottom: 30px
   }
 }
+
+  @media screen and (min-width:$tablet) {
+    max-width: 270px;
+  }
+}
+
 
 
 .feature__box {
@@ -25,13 +37,17 @@ margin-bottom: 30px;
 
 .feature__title {
   margin-bottom: 10px;
- text-align: center;
+  text-align: center;
   color: $priority-title-color;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  @media screen and (min-width:$tablet){
+text-align: start;
+  }
 }
 
 .feature__text {

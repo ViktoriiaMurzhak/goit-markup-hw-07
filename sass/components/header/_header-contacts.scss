@@ -1,9 +1,12 @@
 .contact {
   @extend %list;
   display: none;
-  justify-content: end;
-  gap: 30px;
-}
+  flex-direction: column;
+  align-items: start;
+
+  margin-left: 96px;
+  }
+
 
 .contact__item {
   display: flex;
@@ -14,14 +17,14 @@
 .contact__link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   color: $text-color;
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
 
   transition-property: color;
@@ -38,12 +41,22 @@
 }
 
 .contact__icon {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
+  width: 14px;
+  height: 10px;
+  margin-right: 8px;
   fill: rgba(117, 117, 117, 1);
 
   transition-property: fill;
   transition-duration: $time-hover;
   transition-timing-function: $time-function;
+}
+
+.header-mail {
+  width: 14px;
+  height: 10px;
+}
+
+.header-tel {
+  width: 10px;
+  height: 14px;
 }
