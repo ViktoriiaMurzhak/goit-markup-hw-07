@@ -1,23 +1,26 @@
 .site-nav {
   @extend %list;
-  display: none; 
-  gap: 50px;
+    display: flex;
+    flex-direction: column;
+   gap: 36px;
+   margin-bottom: 302px;
 
 }
 
 .site-nav__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  // padding-top: 32px;
+  // padding-bottom: 32px;
 
   color: $priority-title-color;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.18;
   letter-spacing: 0.02em;
 
   transition-property: color;
   transition-duration: $time-hover;
   transition-timing-function: $time-function;
+
 
   &:hover,
   &:focus {
@@ -29,9 +32,10 @@
   }
 }
 
-// .site-nav__link--active {
-//   position: relative;
-//   color: $accent-color;
+
+.site-nav__link--active {
+  position: relative;
+  color: $accent-color;
 
 //   &::after {
 //     position: absolute;
@@ -47,4 +51,5 @@
 //     outline: 2px;
 //     border-radius: 2px;
 //   }
-// }
+}
+
