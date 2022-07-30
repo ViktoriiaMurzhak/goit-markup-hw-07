@@ -12,6 +12,7 @@
   opacity: 1;
   transition: opacity $time-hover $time-function;
   overflow-y: scroll;
+  z-index: 10;
 
 
 }
