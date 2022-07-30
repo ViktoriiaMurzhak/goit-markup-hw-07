@@ -1,5 +1,13 @@
+
+
 .work {
-  display: none;
+
+@media screen and (max-width:1199px) {
+  display: none; 
+}
+ @media screen and (min-width: $desktop){
+  display: flex;
+ }
   background-color:$priority-bg-color;
   padding-top: 0;
 }
