@@ -5,13 +5,22 @@
   text-align: center;
   background-color: $hero-bg;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero-bg.jpg);
+    url(../images/adapt/hero/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
-  @media screen and (min-width:$desktop){
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/adapt/hero/hero-bg@2x.jpg)
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
@@ -28,12 +37,12 @@
   text-transform: uppercase;
   color: $second-text-color;
 
-  @media screen and (min-width:$tablet){
-  padding-right: 189px;
-  padding-left: 189px;
+  @media screen and (min-width: $tablet) {
+    padding-right: 189px;
+    padding-left: 189px;
   }
 
-  @media screen and (min-width:$desktop){
+  @media screen and (min-width: $desktop) {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -43,6 +52,3 @@
     line-height: 1.36;
   }
 }
-
-
-
