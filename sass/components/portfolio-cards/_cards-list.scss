@@ -2,14 +2,18 @@
 @extend %list;
 display: flex;
 flex-direction: column;
-align-items: center;
+align-items: flex-start;
+gap: 30px;
 
 @media screen and (min-width:$tablet){
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 30px;
+  // gap: 30px;
 }
+
+// @media screen and (min-width:$desktop){
+// gap: 30px;
+// }
 
 }
 
