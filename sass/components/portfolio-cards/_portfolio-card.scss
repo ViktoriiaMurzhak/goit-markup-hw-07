@@ -34,6 +34,12 @@ min-height: 404px;
 
 }
 
+.portfolio-card__link{
+display: flex;
+flex-direction: column;
+
+}
+
 .portfolio-card__thumb {
   position: relative;
   overflow: hidden;
@@ -91,6 +97,7 @@ min-height: 404px;
 }
 
 .portfolio-card__box {
+  flex-grow: 1;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
@@ -102,17 +109,7 @@ min-height: 404px;
 
 }
 
-.first-card-box{
-  padding-bottom: 20px;
 
-  @media screen and(min-width:$tablet) {
-      padding-bottom: 56px;
-    }
-
-     @media screen and(min-width:$desktop) {
-       padding-bottom: 20px;
-     }
-}
 
 
 
